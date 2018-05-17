@@ -1,0 +1,85 @@
+{
+    "region_name": "",
+    "alarm_metrics":
+    [
+      {
+        "alarm_name": "CPUUtilization",
+        "alarm_description": "CPU使用率",
+        "metric_name": "CPUUtilization",
+        "namespace": "AWS/EC2",
+        "statistic": "Average",
+        "alarm_actions":"",
+        "period": "300",
+        "unit": "Percent",
+        "threshold": "80",
+        "comparision_operator": "GreaterThanOrEqualToThreshold",
+        "treat_missing_data": "missing",
+        "dimensions":[]
+      },
+      {
+        "alarm_name": "StatusCheckFailed_Instance",
+        "alarm_description": "死活監視(内部インスタンス)",
+        "metric_name": "StatusCheckFailed_Instance",
+        "namespace": "AWS/EC2",
+        "statistic": "Average",
+        "alarm_actions":"",
+        "period": "300",
+        "unit": "Count",
+        "threshold": "1",
+        "comparision_operator": "GreaterThanOrEqualToThreshold",
+        "treat_missing_data": "missing",
+        "dimensions":[]
+      },
+      {
+        "alarm_name": "MemoryUtilization",
+        "alarm_description": "メモリ使用率",
+        "metric_name": "MemoryUtilization",
+        "namespace": "System/Linux",
+        "statistic": "Average",
+        "alarm_actions":"",
+        "period": "300",
+        "unit": "Percent",
+        "threshold": "80",
+        "comparision_operator": "GreaterThanOrEqualToThreshold",
+        "treat_missing_data": "missing",
+        "dimensions":[]
+      },
+      {
+        "alarm_name": "DiskSpaceUtilization",
+        "alarm_description": "ディスク使用率",
+        "metric_name": "DiskSpaceUtilization",
+        "namespace": "System/Linux",
+        "statistic": "Average",
+        "alarm_actions":"",
+        "period": "300",
+        "unit": "Percent",
+        "threshold": "80",
+        "comparision_operator": "GreaterThanOrEqualToThreshold",
+        "treat_missing_data": "missing",
+        "dimensions": [
+            {
+                "Name": "Filesystem",
+                "Value": "/dev/xvda1"
+            },
+            {
+                "Name": "MountPath",
+                "Value": "/"
+            }
+         ]
+      },
+      {
+        "alarm_name": "SwapUtilization",
+        "alarm_description": "スワップ使用率",
+        "metric_name": "SwapUtilization",
+        "namespace": "System/Linux",
+        "statistic": "Average",
+        "alarm_actions":"",
+        "period": "300",
+        "unit": "Percent",
+        "threshold": "80",
+        "comparision_operator": "GreaterThanOrEqualToThreshold",
+        "treat_missing_data": "missing",
+        "dimensions":[]
+      }
+    ]
+}
